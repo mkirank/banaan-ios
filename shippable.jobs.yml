@@ -5,3 +5,4 @@ jobs:
       - TASK: 
           script:
               - pwd
+              - xcodebuild -version
