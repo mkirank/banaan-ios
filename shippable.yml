@@ -1,0 +1,16 @@
+resources:
+  - name: banaan-repo
+    type: gitRepo
+    integration: kiran-docker-subint
+    pointer:
+      sourceName: mkirank/banaan-ios
+      branch: master
+
+jobs:
+  - name: test-pipeline-macos
+    type: runSh
+    steps:
+      - TASK: 
+          script:
+              - pwd
+              - xcodebuild -version

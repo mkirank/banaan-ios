@@ -1,8 +1,0 @@
-jobs:
-  - name: test-pipeline-macos
-    type: runSh
-    steps:
-      - TASK: 
-          script:
-              - pwd
-              - xcodebuild -version
