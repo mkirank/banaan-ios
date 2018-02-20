@@ -16,3 +16,4 @@ jobs:
               - pushd $(shipctl get_resource_state "banaan_repo")
               - pwd
               - xcodebuild -version
+              - ls
