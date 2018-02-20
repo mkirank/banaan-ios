@@ -19,3 +19,4 @@ jobs:
               - pwd
               - xcodebuild -version
               - ls
+              - xcodebuild test -project banaan.xcodeproj/ -scheme banaan -destination  'platform=iOS Simulator,name=iPhone 8,OS=11.2'
