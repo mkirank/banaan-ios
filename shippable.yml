@@ -15,5 +15,7 @@ jobs:
           script:
               - pushd $(shipctl get_resource_state "banaan_repo")
               - pwd
+              - pushd ios-test2
+              - pwd
               - xcodebuild -version
               - ls
