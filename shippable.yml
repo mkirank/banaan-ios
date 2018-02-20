@@ -1,5 +1,5 @@
 resources:
-  - name: banaan-repo
+  - name: banaan_repo
     type: gitRepo
     integration: kiran-docker-subint
     pointer:
@@ -10,7 +10,9 @@ jobs:
   - name: test-pipeline-macos
     type: runSh
     steps:
+      - IN: banaan_repo
       - TASK: 
           script:
+              - pushd $(shipctl get_resource_state "banaan_repo")
               - pwd
               - xcodebuild -version
