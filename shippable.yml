@@ -15,8 +15,5 @@ jobs:
           script:
               - pushd $(shipctl get_resource_state "banaan_repo")
               - pwd
-              - pushd ios-test2
-              - pwd
               - xcodebuild -version
-              - ls
-              - xcodebuild test -project banaan.xcodeproj/ -scheme banaan -destination  'platform=iOS Simulator,name=iPhone 8,OS=11.2'
+              - xcodebuild test -project ios-test2/banaan.xcodeproj/ -scheme banaan -destination  'platform=iOS Simulator,name=iPhone 8,OS=11.2'
